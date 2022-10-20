@@ -1,0 +1,32 @@
+#!/bin/bash
+
+ANSWER=""
+while [ "$ANSWER" != "1" ] && [ "$ANSWER" != "2" ] && [ "$ANSWER" != "3" ] && [ "$ANSWER" != "4" ] && [ "$ANSWER" != "5" ]; do
+    echo "What do you want to do?"
+    echo "1. Install node.js"
+    echo "2. Install vscode (code editor)"
+    echo "3. Install git"
+    echo "4. install spotify"
+    echo "5. install all of the above"
+    echo -n "Enter your choice: "
+    read ANSWER
+done
+
+if [ "$ANSWER" = "1" ]; then
+    sudo snap install nodejs
+fi
+if [ "$ANSWER" = "2" ]; then
+    sudo snap install code
+fi
+if [ "$ANSWER" = "3" ]; then
+    sudo apt-get install git -y
+fi
+if [ "$ANSWER" = "4" ]; then
+    sudo snap install spotify
+fi
+if [ "$ANSWER" = "5" ]; then
+    sudo snap install nodejs
+    sudo snap install code
+    sudo apt-get install git -y
+    sudo snap install spotify
+fi
