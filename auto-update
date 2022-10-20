@@ -2,7 +2,7 @@
 
 ANSWER=""
 while [ "$ANSWER" != "yes" ] && [ "$ANSWER" != "no" ]; do
-    echo -n "Do you want to update the system? [yes/no]"
+    echo -n "Do you want to update the system to the latest version? [yes/no]"
     read ANSWER
 done
 
