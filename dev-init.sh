@@ -28,7 +28,15 @@ while [ "$RUNNING" = "true" ]; do
       "5" "Install nodejs (via snap)" \
       "6" "Install npm" \
       "7" "Install yarn" \
-      "8" "Exit" 3>&1 1>&2 2>&3)
+      "8" "Install Docker" \
+      "9" "Install Docker Compose" \
+      "10" "Install Dbeaver" \
+      "11" "Install PgAdmin" \
+      "12" "Install MySQL Workbench" \
+      "13" "Install MongoDB Compass" \
+      "14" "Install Insonmia" \
+      "15" "Install Postman" \
+      "16" "Exit" 3>&1 1>&2 2>&3)
     if [ "$WHIPTAIL" = "1" ]; then
       sudo snap install --classic code
     elif [ "$WHIPTAIL" = "2" ]; then
@@ -44,6 +52,22 @@ while [ "$RUNNING" = "true" ]; do
     elif [ "$WHIPTAIL" = "7" ]; then
       sudo npm install --global yarn
     elif [ "$WHIPTAIL" = "8" ]; then
+      sudo apt install docker 
+    elif [ "$WHIPTAIL" = "9" ]; then
+      sudo apt install docker-compose
+    elif [ "$WHIPTAIL" = "10" ]; then
+      sudo snap install dbeaver-ce
+    elif [ "$WHIPTAIL" = "11" ]; then
+      sudo snap install pgadmin4
+    elif [ "$WHIPTAIL" = "12" ]; then
+      sudo snap install mysql-workbench-community
+    elif [ "$WHIPTAIL" = "13" ]; then
+      sudo snap install compass
+    elif [ "$WHIPTAIL" = "14" ]; then
+      sudo snap install insomnia
+    elif [ "$WHIPTAIL" = "15" ]; then
+      sudo snap install postman
+    elif [ "$WHIPTAIL" = "16" ]; then
       MENU_OPTION="0"
     fi
   elif [ "$MENU_OPTION" = "2" ]; then
